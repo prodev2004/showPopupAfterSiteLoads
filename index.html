@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Show Pop Up After Site Loads - No JavaScript</title>
+        <!-- I've created another video where we create this exact same project but with JS.
+            Check the video description for that video -->
+    </head>
+    <body>
+        <div class="content">
+            <h2>Some Title</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur voluptatum veniam quaerat at id praesentium eligendi ratione delectus, cumque dolore accusamus, officia aspernatur reprehenderit qui eveniet culpa recusandae necessitatibus voluptatem aut quo quia libero ullam! Cumque in repellat, tempore, quia alias doloribus laboriosam a minus distinctio, beatae quos error. Tempora quasi fugit harum, incidunt doloribus iusto ullam magnam iste ut eligendi. Delectus velit labore quas est reiciendis totam quia reprehenderit aspernatur doloremque incidunt voluptatibus molestiae tempora numquam, fugit possimus saepe aut dolores? Aut, natus ea ullam, dolorum accusantium nesciunt repudiandae quo excepturi quidem veniam, eos ex sapiente ipsam delectus non laborum in! Voluptas autem eaque voluptatum accusantium eius nisi alias deserunt. Veniam adipisci, officia perspiciatis maxime quas, iure sit excepturi voluptatibus quae eaque nemo. Facere sunt amet fuga incidunt obcaecati voluptatibus repudiandae. Ex eum soluta exercitationem officia quibusdam, aliquam nobis quam vero facere est qui, iusto error maiores voluptate? Omnis temporibus ratione voluptas eum totam, natus laborum porro officia, saepe non excepturi doloremque iste culpa ipsa voluptates molestias! Ab quidem possimus, deserunt, ex sed similique voluptatum vel tempora sit porro ipsa pariatur esse in expedita maiores, nostrum atque? Fugiat veniam nesciunt autem dolores repellendus alias ducimus laudantium expedita pariatur sequi doloremque odio dolorum ullam eveniet reprehenderit, at eum sint vel omnis! Veniam laboriosam architecto facere quos debitis quae, at alias tempora atque aliquid natus nostrum! Similique doloremque iusto pariatur voluptates? Magni asperiores error vero iste pariatur in sint suscipit neque est amet sequi maxime ratione, repellendus nesciunt porro aliquam quasi eos totam iusto? Eaque velit ab animi nam. Eveniet expedita earum aliquam magni porro veniam doloribus laborum quasi facilis ratione quia nisi, quisquam natus odio commodi nostrum nihil vitae, perferendis, sed sint molestiae! Laudantium esse nam repellendus deserunt laboriosam voluptatibus non. Debitis ipsam laboriosam ducimus iste. Animi, est pariatur.</p>
+            <h3>Another Title</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ducimus iusto distinctio maiores facere maxime nam ipsum amet officia recusandae architecto, soluta a consectetur corporis ullam laboriosam sunt ut delectus asperiores! Quibusdam corporis quidem adipisci commodi. Saepe voluptatibus assumenda error, omnis magnam sunt perspiciatis eaque ducimus reiciendis reprehenderit quo temporibus, officia explicabo quia suscipit tempora voluptate, rem similique fugit ullam voluptates. Excepturi nisi eius iste, illo ad architecto tenetur tempore, earum sapiente ipsa, beatae distinctio necessitatibus quaerat quasi in sequi maxime dolores perferendis sunt iure repellendus impedit quo. Aperiam repellat sequi tenetur voluptatum laborum voluptate molestias sint dolor enim eum.</p>
+            <h3>Another Title</h3>
+            <p>Inside Here It'll be your real content of the website. I'm just writing some text to fill up the screen</p>
+        </div>
+
+        <!-- here will be the popup -->
+        <!-- Inside the pop_up you can add the content you want to add to the pop up
+        In my case I'll just create a sign up form -->
+        <!-- All the trick will be with this label tag -->
+        <!-- We'll also create an input tag -->
+        <!-- input's id must be the same as label's for attr -->
+        <!-- so when we click the X the checkbox will get checked or unchecked -->
+        <input type="checkbox" id="popup">
+        <div class="pop_up_container">
+            <div class="pop_up">
+                <label for="popup">
+                    <h1>X</h1>
+                </label>
+                <form>
+                    <legend>Sign Up</legend>
+                    <input type="text" placeholder="Your Name..." required autocomplete="off">
+                    <input type="email" placeholder="Your Email..." required autocomplete="off">
+                    <input type="password" placeholder="Your Password..." required autocomplete="off">
+                </form>
+                <button type="button">Sign Up</button>
+            </div>
+        </div>
+    </body>
+</html>

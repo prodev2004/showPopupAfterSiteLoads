@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #eee;
+}
+
+.content {
+    padding: 5rem;
+}
+h2, h3 {
+    margin-top: 2rem;
+}
+
+.pop_up_container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .3);
+    inset: 0;
+    display: grid;
+    place-items: center;
+    animation: show_popup 500ms ease-in-out forwards;
+}
+
+.pop_up {
+    width: clamp(300px, 90vw, 500px);
+    background-color: #0e0e0e;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    color: #fff;
+}
+
+/* this is the X */
+.pop_up h1 {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    cursor: pointer;
+    user-select: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form * {
+    margin: .5rem 0;
+}
+
+input, button {
+    border: none;
+    border-bottom: .15rem solid #ff0000;
+    font-size: 1rem;
+    padding: .3rem;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+legend {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+button {
+    border: none;
+    background-color: #ff0000;
+    border-radius: .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    width: 100%; 
+}
+
+.pop_up h1:active,
+button:active {
+    transform: scale(.9);
+}
+
+/* we're selecting the checkbox */
+/* ~ selects all the the siblings */
+/* we'll also have to remove the animation when the checkbox gets checked */
+/* and remove the input element from the screen */
+#popup:checked ~ .pop_up_container {
+    transform: scale(0);
+    pointer-events: none;
+    animation: none;
+}
+/* so basically what we're saying is when the checkbox gets checked select the sibling with the class of .pop_up_container and apply those properties */
+/* now I'll add some animations to make it look more attractive */
+
+@keyframes show_popup {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+#popup {
+    display: none;
+}
+/* the source code in the description... */
+/* and fix my mistake */
